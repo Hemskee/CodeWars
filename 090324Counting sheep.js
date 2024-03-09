@@ -7,3 +7,7 @@ function countSheeps(sheep) {
     }
     return sum;
   }
+
+  /*function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+  }*/
