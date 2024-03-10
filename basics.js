@@ -1,8 +1,9 @@
+//1. Convert a String to a Number!
 var stringToNumber = function(str){
     return Number(str);
   }
-  //Convert a String to a Number!
-
+  
+//2. Basic Mathematical Operations
   function basicOp(operation, value1, value2) {
     switch (operation) {
         case '+':
@@ -16,13 +17,14 @@ var stringToNumber = function(str){
         default:
             return 0;
     }
-}//Basic Mathematical Operations
+}
 
+//3. Opposite number
 function opposite(number) {
     return(-number);
   }
-  //Opposite number
-
+  
+//4. Complementary DNA
   function dnaStrand(dna){
     const x = { 
               'A': 'T',
@@ -33,4 +35,47 @@ function opposite(number) {
     return dna.replace(/A|T|G|C/g, function(matched) {
       return x[matched];
   });
-  } //Complementary DNA
+  } 
+
+//5. DNA to RNA Conversion
+  function DNAtoRNA(dna){
+    return dna.replace(/T/g, 'U');
+  }
+  
+//6. Odd or Even?
+  function oddOrEven(array) {
+    return (((array.reduce(function(a, b){
+     return a + b;
+     }, 0)) % 2 === 0)||array == 0) ? 'even' : 'odd';
+ }
+
+//7. Reversed Strings
+ function solution(str){
+    return str.split('').reverse().join('').toString();
+  }
+
+//8. Even or Odd
+  function evenOrOdd(number) {
+    return number % 2 === 0 ? 'Even' : 'Odd'
+  }
+
+//9. Number of People in the Bus
+  var number = function(busStops){
+    let x = 0;
+    let y = 0;
+    for(let i = 0; i < busStops.length; i++)
+      {
+        x += busStops[i][0];
+        y += busStops[i][1];
+      }
+    return x - y;
+  }
+
+//10. Build Tower
+  function towerBuilder(nFloors) {
+    let s, st, tow =[];
+    for (let i = 0; i < nFloors; i++){
+      i == nFloors-1 ? tow.push("*".repeat((2 * i) + 1)) : tow.push(" ".repeat(nFloors-i-1)+"*".repeat((2 * i) + 1)+" ".repeat(nFloors-i-1));
+    }
+    return tow;
+  }
