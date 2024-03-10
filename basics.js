@@ -22,3 +22,15 @@ function opposite(number) {
     return(-number);
   }
   //Opposite number
+
+  function dnaStrand(dna){
+    const x = { 
+              'A': 'T',
+              'T' : 'A',
+              'G' : 'C',
+              'C' : 'G'
+              }
+    return dna.replace(/A|T|G|C/g, function(matched) {
+      return x[matched];
+  });
+  } //Complementary DNA
