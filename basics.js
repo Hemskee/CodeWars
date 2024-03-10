@@ -17,3 +17,8 @@ var stringToNumber = function(str){
             return 0;
     }
 }//Basic Mathematical Operations
+
+function opposite(number) {
+    return(-number);
+  }
+  //Opposite number
