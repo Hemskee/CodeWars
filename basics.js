@@ -79,3 +79,25 @@ function opposite(number) {
     }
     return tow;
   }
+//Array.diff
+  function arrayDiff(a, b) {
+    return a.filter(x => b.indexOf(x) === -1);
+   }
+/*function array_diff(a, b) {
+return a.filter(e => !b.includes(e));
+}*/
+
+//Build a pile of Cubes
+function findNb(m) {
+  let x = 0;
+  let y = 1;
+   while (x <= m){
+     x += Math.pow(y, 3);
+     if (x==m){
+       return y;
+       break;
+     } 
+    y++;
+   }
+  return -1;
+}
